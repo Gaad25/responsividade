@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #000;
+    padding: 10px 0;
+}
+
+header img {
+    width: 150px;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+}
+
+header nav li {
+    margin: 0 10px;
+}
+
+header nav a {
+    color: #fff;
+}
+
+#sobre-loja {
+    padding: 30px 0;
+}
+
+#sobre-loja img {
+    float: left;
+    margin-right: 30px;
+}
+
+#sobre-loja .texto {
+    width: 50%;
+}
+
+#produtos {
+    padding: 30px 0;
+}
+
+#produtos h2 {
+    margin-bottom: 20px;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lista-produtos li {
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+.lista-produtos a {
+    color: #333;
+}
+
+.lista-produtos img {
+    margin-bottom: 10px;
+}
+
+.lista-produtos h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.lista-produtos p {
+    font-size: 14px;
+}
+
+.lista-produtos .preco {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+footer {
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer .redes-sociais {
+    margin: 0 auto;
+    width: 200px;
+}
+
+footer .redes-sociais li {
+    margin: 0 5px;
+}
+
+footer .redes-sociais img {
+    width: 24px;
+}
+
+@media (max-width: 640px) {
+    .header {
+        position: relative;
+    }
+
+    .header nav {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+    }
+
+    .menu-hamburguer button {
+        width: 40px;
+        height: 40px;
+        background-color: #000;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-hamburguer button::before,
+    .menu-hamburguer button::after,
+    .menu-hamburguer button::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    .menu-hamburguer button::before {
+        top: 10px;
+    }
+
+    .menu-hamburguer button::after {
+        top: 20px;
+    }
+
+    .menu-hamburguer button::before,
+    .menu-hamburguer button::after {
+        transition: 0.3s ease-in-out;
+    }
+
+    .menu-hamburguer button.active::before {
+        top: 20px;
+    }
+
+    .menu-hamburguer button.active::after {
+        bottom: 10px;
+    }
+
+    .menu-hamburguer button.active::before,
+    .menu-hamburguer button.active::after {
+        transform: rotate(-45deg) translate(-50%, -50%);
+    }
+
+    .menu-hamburguer .menu-mobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 9;
+        display: none;
+    }
+
+    .menu-hamburguer .menu-mobile ul {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .menu-hamburguer .menu-mobile li {
+        margin-bottom: 10px;
+    }
+
+    .menu-hamburguer .menu-mobile a {
+        color: #333;
+    }
+
+    .produtos {
+        padding: 20px 10px;
+    }
+
+    .lista-produtos {
+        flex-direction: column;
+    }
+
+    .lista-produtos li {
+        width: 100%;
+    }
+
+    .lista-produtos img {
+        margin-bottom: 10px;
+    }
+
+    .lista-produtos h3 {
+        font-size: 16px;
+    }
+
+    .lista-produtos p {
+        font-size: 14px;
+    }
+
+    .lista-produtos .preco {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .header nav {
+        display: flex;
+    }
+
+    .menu-hamburguer {
+        display: none;
+    }
+
+    .produtos {
+        padding: 30px 20px;
+    }
+
+    .lista-produtos li {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .produtos {
+        padding: 30px 0;
+    }
+}
